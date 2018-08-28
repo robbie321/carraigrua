@@ -6,11 +6,11 @@
 // }
 if(isset($_POST['submit'])){
   $name = $_POST['name'];
-  $emailFrom = $_POST['email'];
+  $emailFrom = $_POST['mail'];
   $subject = $_POST['subject'];
   $message = $_POST['message'];
-  $mailTo = "info@robbiemalone.com";
-  $header = "From: ".$mailFrom;
+  $mailTo = "darran.blacky@gmail.com";
+  $header = "From: ".$emailFrom;
   $txt="You have recieved and email from ".$name.".\n\n".$message;
   mail($mailTo, $subject, $txt, $header);
 
