@@ -6,8 +6,8 @@
 // }
 if(isset($_POST['submit'])){
   $name = $_POST['name'];
-  $emailFrom = $_POST['email'];
   $subject = $_POST['subject'];
+  $emailFrom = $_POST['email'];
   $message = $_POST['message'];
   $mailTo = "info@robbiemalone.com";
   $header = "From: ".$mailFrom;
@@ -17,6 +17,8 @@ if(isset($_POST['submit'])){
   header("Location: index.php?mailsend");
 }
 
+if(!mail($mailTo, $subject, $txt, $header))
+  http_response_code(500);
 
 
 // // Create the email and send the message
