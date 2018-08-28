@@ -4,7 +4,7 @@
 //   http_response_code(500);
 //   exit();
 // }
-if(isset($_POST['Send Message'])){
+if(isset($_POST['submit'])){
   $name = $_POST['name'];
   $emailFrom = $_POST['email'];
   $subject = $_POST['subject'];
