@@ -18,7 +18,7 @@ if(isset($_POST['submit'])){
 }
 
 if(!mail($mailTo, $subject, $txt, $header))
-  http_response_code(500);
+  http_response_code("NOT FOUND");
 
 
 // // Create the email and send the message
