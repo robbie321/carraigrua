@@ -1,9 +1,4 @@
 <?php
-// Check for empty fields
-// if(empty($_POST['name']) || empty($_POST['email']) || empty($_POST['phone']) || empty($_POST['message']) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-//   http_response_code(500);
-//   exit();
-// }
 if(isset($_POST['submit'])){
   $name = $_POST['name'];
   $subject = $_POST['subject'];
@@ -15,10 +10,12 @@ if(isset($_POST['submit'])){
   mail($mailTo, $subject, $txt, $header);
 
   header("Location: index.php?mailsend");
+  print("DONE");
 }
 
 if(!mail($mailTo, $subject, $txt, $header))
-  http_response_code("NOT FOUND");
+print("ERROR");
+  http_response_code(500);
 
 
 // // Create the email and send the message
