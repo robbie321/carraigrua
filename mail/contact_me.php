@@ -1,11 +1,11 @@
 <?php
  
 
-if(isset($_POST['name'])){
-  $name = $_POST['name'];
+if(isset($_POST['n'])){
+  $name = $_POST['n'];
   $subject = $_POST['subject'];
-  $emailFrom = $_POST['email'];
-  $message = $_POST['message'];
+  $emailFrom = $_POST['e'];
+  $message = $_POST['m'];
   $mailTo = "info@robbiemalone.com";
   $header = "From: ".$emailFrom;
   $txt="You have recieved and email from ".$name.".\n\n".$message;

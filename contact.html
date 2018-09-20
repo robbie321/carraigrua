@@ -65,27 +65,51 @@
     <button type="submit">Send</button>
   </form> -->
 
+  <script>
+  function _(id){ return document.getElementById(id);}
+  function submitForm() {
+    _("mybtn").disabled = true;
+    _("status").innerHTML = 'please wait ...';
+    var formdata = new FormData();
+    formdata.append( "n", _("n").value );
+    formdata.append( "e", _("e").value );
+    formdata.append( "m", _("m").value );
+    var ajax = new XMLHttoRequest();
+    ajax.open( "POST", "mail/contact_me.php");
+    ajax.onreadystatechange = function() {
+      if(ajax.readyState == 4 && ajax.status == 200){
+        if(ajax.responseText == "success"){
+           _("my_form").innerHTML = '<h2>Thanks '+_("n").value+', your message has been sent.</h2>';
+        }else {
+           _("status").innerHTML = ajax.responseText;
+          _("mybtn").disabled = false;
+        }
+      }
+    }
+   ajax.send( formdata );
+  }
+  </script>
 
   <div class="site-section">
       <div class="container">
         <div class="row block-9">
           <div class="col-md-6 pr-md-5">
             <h2 class="heading">Contact Us Test</h2>
-              <form class="contact-form" action="./mail/contact_me.php" method="POST">
+              <form id="my_form" class="contact-form" action="./mail/contact_me.php" method="POST">
                 <div class="form-group">
-                    <input type="text" name="name" class="form-control px-3 py-3" placeholder="Full Name">
+                    <input id="n" type="text" name="name" class="form-control px-3 py-3" placeholder="Full Name">
                   </div>
                 <div class="form-group">
-                <input type="email" name="email" class="form-control px-3 py-3" placeholder="Your Email">
+                <input id="e" type="email" name="email" class="form-control px-3 py-3" placeholder="Your Email">
                 </div>
                 <div class="form-group">
                 <input type="text" name="subject" class="form-control px-3 py-3" placeholder="Subject">
                 </div>
                 <div class="form-group">
-                <textarea name="message" id="" cols="30" rows="7"  class="form-control px-3 py-3" placeholder="Message"></textarea>
+                <textarea id="m" name="message" id="" cols="30" rows="7"  class="form-control px-3 py-3" placeholder="Message"></textarea>
               </div>
                 <div class="form-group">
-                <button type="=submit" name="submit" class="btn btn-primary py-3 px-5">SEND MESSAGE</button>
+                <button id="mybtn" type="=submit" name="submit" class="btn btn-primary py-3 px-5">SEND MESSAGE</button>
                 </div>
               </form>
             </div>
