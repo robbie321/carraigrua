@@ -10,11 +10,13 @@ if(isset($_POST['submit'])){
   mail($mailTo, $subject, $txt, $header);
 
   header("Location: index.php?mailsend");
-  print("DONE");
+  echo("DONE");
+  // print("DONE");
 }
 
 if(!mail($mailTo, $subject, $txt, $header))
-print("ERROR");
+// print("ERROR");
+echo("Error" + $mailTo + $subject + $txt + $header);
   http_response_code(500);
 
 
