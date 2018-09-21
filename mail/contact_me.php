@@ -3,6 +3,8 @@
  if ( function_exists( 'mail' ) )
  {
      echo 'mail() is available';
+  mail('13155105@studentmail.ul.ie', 'test subject', '3 Hours', 'From : Chris Exton');
+
  }
  else
  {
