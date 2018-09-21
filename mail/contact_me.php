@@ -44,7 +44,7 @@
 
 
   
-}
+
 if(!mail($mailTo, $subject, $txt, $header)){
 
 
