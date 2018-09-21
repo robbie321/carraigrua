@@ -2,6 +2,7 @@
  
 
  if(isset($_POST['submit'])){
+  echo 'passed : ';
   $name = $_POST['name'];
   $subject = $_POST['subject'];
   $emailFrom = $_POST['email'];
@@ -15,11 +16,11 @@
 if(!mail($mailTo, $subject, $txt, $header)){
 
 
-  echo 'failed : dsnskfjdnc';
-  echo 'mailTO : dsnskfjdnc' .$mailTo;
-  echo 'subject : dsnskfjdnc' .$subject;
-  echo 'txt : dsnskfjdnc' .$txt;
-  echo 'header : dsnskfjdnc' .$header;
+  echo 'failed : ';
+  echo 'mailTO : ' . $mailTo;
+  echo 'subject : ' . $subject;
+  echo 'txt : ' . $txt;
+  echo 'header : ' . $header;
 
   mail("info@robbiemalone.com", "test subject", "3 Hours", "From : Chris Exton");
 }
