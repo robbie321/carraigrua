@@ -14,5 +14,11 @@
 }
 if(!mail($mailTo, $subject, $txt, $header))
   echo 'failed : dsnskfjdnc';
+  echo 'mailTO : dsnskfjdnc', $mailTo;
+  echo 'subject : dsnskfjdnc', $subject;
+  echo 'txt : dsnskfjdnc', $txt;
+  echo 'header : dsnskfjdnc', $header;
+
+
 
 ?>
