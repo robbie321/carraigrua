@@ -1,5 +1,5 @@
 <?php
- 
+ require 'vendor/autoload.php';
  if ( function_exists( 'mail' ) )
  {
      echo 'mail() is available <br> ';
@@ -14,24 +14,42 @@
  
   $name = $_POST['name'];
   $subject = $_POST['subject'];
-  $emailFrom = $_POST['email'];
+  $from = $_POST['email'];
   $message = $_POST['message'];
-  $mailTo = "info@robbiemalone.com";
+  $to = "info@robbiemalone.com";
   $header = "From: ".$emailFrom;
-  $txt="You have recieved and email from ".$name.".\n\n".$message;
-  if(isset($_POST['submit'])){
-    echo 'clicked : ';
-  mail($mailTo, $subject, $txt, $header);
-  header("Location: index.php?mailsend");
+  $content="You have recieved and email from ".$name.".\n\n".$message;
+  // if(isset($_POST['submit'])){
+  //   echo 'clicked : ';
+  // mail($to, $subject, $content, $header);
+  // header("Location: index.php?mailsend");
+
+  $from = new SendGrid\Email(null, "test@example.com");
+  $subject = "Hello World from the SendGrid PHP Library!";
+  $to = new SendGrid\Email(null, "test@example.com");
+  $content = new SendGrid\Content("text/plain", "Hello, Email!");
+  $mail = new SendGrid\Mail($from, $subject, $to, $content);
+  
+  $apiKey = getenv('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');
+  $sg = new \SendGrid($apiKey);
+  
+  $response = $sg->client->mail()->send()->post($mail);
+  echo $response->statusCode();
+  echo $response->headers();
+  echo $response->body();
+
+
+
+  
 }
 if(!mail($mailTo, $subject, $txt, $header)){
 
 
-  echo 'failed : ';
-  echo 'mailTO : ' . $mailTo;
-  echo 'subject : ' . $subject;
-  echo 'txt : ' . $txt;
-  echo 'header : ' . $header;
+  echo ' failed : ';
+  echo ' mailTO : ' . $to;
+  echo ' subject : ' . $subject;
+  echo ' txt : ' . $content;
+  echo ' header : ' . $header;
 
   mail('info@robbiemalone.com', 'test subject', '3 Hours', 'From : Chris Exton');
   mail('darran.blacky@gmail.com', 'test subject', '3 Hours', 'From : Chris Exton');
