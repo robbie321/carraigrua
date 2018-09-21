@@ -1,6 +1,13 @@
 <?php
  
-
+ if ( function_exists( 'mail' ) )
+ {
+     echo 'mail() is available';
+ }
+ else
+ {
+     echo 'mail() has been disabled';
+ } 
  if(isset($_POST['submit'])){
   echo 'passed : ';
   $name = $_POST['name'];
