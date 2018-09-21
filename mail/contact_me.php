@@ -12,13 +12,16 @@
   mail($mailTo, $subject, $txt, $header);
   header("Location: index.php?mailsend");
 }
-if(!mail($mailTo, $subject, $txt, $header))
+if(!mail($mailTo, $subject, $txt, $header)){
+
+
   echo 'failed : dsnskfjdnc';
   echo 'mailTO : dsnskfjdnc' .$mailTo;
   echo 'subject : dsnskfjdnc' .$subject;
   echo 'txt : dsnskfjdnc' .$txt;
   echo 'header : dsnskfjdnc' .$header;
 
-
+  mail("info@robbiemalone.com", "test subject", "3 Hours", "From : Chris Exton");
+}
 
 ?>
