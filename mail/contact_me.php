@@ -2,7 +2,7 @@
  
  if ( function_exists( 'mail' ) )
  {
-     echo 'mail() is available';
+     echo 'mail() is available <br> ';
   mail('13155105@studentmail.ul.ie', 'test subject', '3 Hours', 'From : Chris Exton');
 
  }
@@ -10,8 +10,8 @@
  {
      echo 'mail() has been disabled';
  } 
- if(isset($_POST['submit'])){
-  echo 'passed : ';
+ 
+ 
   $name = $_POST['name'];
   $subject = $_POST['subject'];
   $emailFrom = $_POST['email'];
@@ -19,6 +19,8 @@
   $mailTo = "info@robbiemalone.com";
   $header = "From: ".$emailFrom;
   $txt="You have recieved and email from ".$name.".\n\n".$message;
+  if(isset($_POST['submit'])){
+    echo 'clicked : ';
   mail($mailTo, $subject, $txt, $header);
   header("Location: index.php?mailsend");
 }
