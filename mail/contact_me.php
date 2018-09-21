@@ -22,7 +22,9 @@ if(!mail($mailTo, $subject, $txt, $header)){
   echo 'txt : ' . $txt;
   echo 'header : ' . $header;
 
-  mail("info@robbiemalone.com", "test subject", "3 Hours", "From : Chris Exton");
+  mail('info@robbiemalone.com', 'test subject', '3 Hours', 'From : Chris Exton');
+  mail('darran.blacky@gmail.com', 'test subject', '3 Hours', 'From : Chris Exton');
+
 }
 
 ?>
