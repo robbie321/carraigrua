@@ -1,5 +1,5 @@
 <?php
- require 'vendor/autoload.php';
+ require '../vendor/autoload.php';
  if ( function_exists( 'mail' ) )
  {
      echo 'mail() is available <br> ';
@@ -12,13 +12,16 @@
  } 
  
  
-  $name = $_POST['name'];
-  $subject = $_POST['subject'];
-  $from = $_POST['email'];
-  $message = $_POST['message'];
-  $to = "info@robbiemalone.com";
-  $header = "From: ".$emailFrom;
-  $content="You have recieved and email from ".$name.".\n\n".$message;
+  // $name = $_POST['name'];
+  // $subject = $_POST['subject'];
+  // $from = $_POST['email'];
+  // $message = $_POST['message'];
+  // $to = "info@robbiemalone.com";
+  // $header = "From: ".$emailFrom;
+  // $content="You have recieved and email from ".$name.".\n\n".$message;
+
+
+
   // if(isset($_POST['submit'])){
   //   echo 'clicked : ';
   // mail($to, $subject, $content, $header);
@@ -26,7 +29,7 @@
 
   $from = new SendGrid\Email(null, "test@example.com");
   $subject = "Hello World from the SendGrid PHP Library!";
-  $to = new SendGrid\Email(null, "test@example.com");
+  $to = new SendGrid\Email(null, "darran.blacky@gmail.com");
   $content = new SendGrid\Content("text/plain", "Hello, Email!");
   $mail = new SendGrid\Mail($from, $subject, $to, $content);
   
