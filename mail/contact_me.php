@@ -1,15 +1,15 @@
 <?php
  require '../vendor/autoload.php';
- if ( function_exists( 'mail' ) )
- {
-     echo 'mail() is available <br> ';
-  mail('13155105@studentmail.ul.ie', 'test subject', '3 Hours', 'From : Chris Exton');
+//  if ( function_exists( 'mail' ) )
+//  {
+//      echo 'mail() is available <br> ';
+//   mail('13155105@studentmail.ul.ie', 'test subject', '3 Hours', 'From : Chris Exton');
 
- }
- else
- {
-     echo 'mail() has been disabled';
- } 
+//  }
+//  else
+//  {
+//      echo 'mail() has been disabled';
+//  } 
  
  
   // $name = $_POST['name'];
@@ -23,7 +23,12 @@
 
 
 
-  // if(isset($_POST['submit'])){
+  if(isset($_POST['submit'])){
+    echo 'submit clicked';
+    echo '<br>';
+
+
+
   //   echo 'clicked : ';
   // mail($to, $subject, $content, $header);
   // header("Location: index.php?mailsend");
@@ -49,17 +54,17 @@
 
   
 
-if(!mail($mailTo, $subject, $txt, $header)){
+// if(!mail($mailTo, $subject, $txt, $header)){
 
 
-  echo ' failed : ';
-  echo ' mailTO : ' . $to;
-  echo ' subject : ' . $subject;
-  echo ' txt : ' . $content;
-  echo ' header : ' . $header;
+//   echo ' failed : ';
+//   echo ' mailTO : ' . $to;
+//   echo ' subject : ' . $subject;
+//   echo ' txt : ' . $content;
+//   echo ' header : ' . $header;
 
-  mail('info@robbiemalone.com', 'test subject', '3 Hours', 'From : Chris Exton');
-  mail('darran.blacky@gmail.com', 'test subject', '3 Hours', 'From : Chris Exton');
+//   mail('info@robbiemalone.com', 'test subject', '3 Hours', 'From : Chris Exton');
+//   mail('darran.blacky@gmail.com', 'test subject', '3 Hours', 'From : Chris Exton');
 
 }
 
