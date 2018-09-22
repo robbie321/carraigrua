@@ -23,7 +23,7 @@
 
 
 
-  if(isset($_POST['submit'])){
+  // if(isset($_POST['submit'])){
     echo 'submit clicked';
     echo '<br>';
 
@@ -66,6 +66,6 @@
 //   mail('info@robbiemalone.com', 'test subject', '3 Hours', 'From : Chris Exton');
 //   mail('darran.blacky@gmail.com', 'test subject', '3 Hours', 'From : Chris Exton');
 
-}
+// }
 
 ?>
