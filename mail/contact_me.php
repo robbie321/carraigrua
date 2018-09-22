@@ -12,14 +12,14 @@
  } 
  
  
-  $name = $_POST['name'];
-  $subject = $_POST['subject'];
-  $from = $_POST['email'];
-  $message = $_POST['message'];
-  $to = "darran.blacky@gmail.com";
+  // $name = $_POST['name'];
+  // $subject = $_POST['subject'];
+  // $from = $_POST['email'];
+  // $message = $_POST['message'];
+  // $to = "darran.blacky@gmail.com";
 
-  $header = "From: ".$emailFrom;
-  $content="You have recieved and email from ".$name.".\n\n".$message;
+  // $header = "From: ".$emailFrom;
+  // $content="You have recieved and email from ".$name.".\n\n".$message;
 
 
 
