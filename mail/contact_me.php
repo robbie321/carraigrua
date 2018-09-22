@@ -35,7 +35,7 @@
   
   // $mail = new SendGrid\Email();
   // $mail->addTo($to)->setFrom($from)->setSubject($subject)->setText($content);
-  // $mail = new SendGrid\Mail($from, $subject, $to, $content);
+  $mail = new SendGrid\Mail($from, $subject, $to, $content);
   
   $sg = new \SendGrid('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');
   
