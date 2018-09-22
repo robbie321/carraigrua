@@ -33,23 +33,22 @@
   // mail($to, $subject, $content, $header);
   // header("Location: index.php?mailsend");
 
-  $from = new SendGrid\Email(null, "Test_2@gmail.com");
-  $subject = "MANUALLY ADDING IT!";
-  $to = new SendGrid\Email(null, "darran.blacky@gmail.com");
-  $content = new SendGrid\Content("You have recieved and email from ");
+
   
-  // $mail = new SendGrid\Email();
-  // $mail->addTo($to)->setFrom($from)->setSubject($subject)->setText($content);
+  
+  $from = new SendGrid\Email(null, "test@example.com");
+  $subject = "WORKING!";
+  $to = new SendGrid\Email(null, "darran.blacky@gmail.com");
+  $content = new SendGrid\Content("text/plain", "Hello, Email!");
   $mail = new SendGrid\Mail($from, $subject, $to, $content);
   
   $sg = new \SendGrid('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');
   
-  $response = $sg->client->mail()->send()->post($mail);
 
+  $response = $sg->client->mail()->send()->post($mail);
   echo $response->statusCode();
   echo $response->headers();
   echo $response->body();
-
 
 
   
