@@ -14,11 +14,11 @@
  
   $name = $_POST['name'];
   $subject = $_POST['subject'];
-  // $from = $_POST['email'];
+  $from = $_POST['email'];
   $message = $_POST['message'];
-  // $to = "info@robbiemalone.com";
+  $to = "info@robbiemalone.com";
   $header = "From: ".$emailFrom;
-  // $content="You have recieved and email from ".$name.".\n\n".$message;
+  $content="You have recieved and email from ".$name.".\n\n".$message;
 
 
 
@@ -27,10 +27,10 @@
   // mail($to, $subject, $content, $header);
   // header("Location: index.php?mailsend");
 
-  $from = new SendGrid\Email(null, $_POST['email']);
+  // $from = new SendGrid\Email(null, $_POST['email']);
   // $subject = "Hello World from the SendGrid PHP Library!";
-  $to = new SendGrid\Email(null, "darran.blacky@gmail.com");
-  $content = new SendGrid\Content("You have recieved and email from ".$name.".\n\n".$message);
+  // $to = new SendGrid\Email(null, "darran.blacky@gmail.com");
+  // $content = new SendGrid\Content("You have recieved and email from ".$name.".\n\n".$message);
   $mail = new SendGrid\Mail($from, $subject, $to, $content);
   
   $sg = new \SendGrid('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');
