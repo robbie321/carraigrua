@@ -36,10 +36,10 @@
 
   
   
-  $from = new SendGrid\Email(null, "test@example.com");
-  $subject = "WORKING!";
-  $to = new SendGrid\Email(null, "darran.blacky@gmail.com");
-  $content = new SendGrid\Content("text/plain", "Hello, Email!");
+  $from = new SendGrid\Email(null, "Chris.Exton@ul.ie");
+  $subject = "College Results";
+  $to = new SendGrid\Email(null, "info@robbiemalone.com");
+  $content = new SendGrid\Content("text/plain", "Just rechecked your exams, and you actually failed. Chat ya later. Regards Chris E");
   $mail = new SendGrid\Mail($from, $subject, $to, $content);
   
   $sg = new \SendGrid('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');
