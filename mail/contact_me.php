@@ -36,13 +36,16 @@
 
   
   
-  $from = new SendGrid\Email(null, "Chris.Exton@ul.ie");
-  $subject = "College Results";
-  $to = new SendGrid\Email(null, "info@robbiemalone.com");
-  $content = new SendGrid\Content("text/plain", "Just rechecked your exams, and you actually failed. Chat ya later. Regards Chris E");
+  $firstName = $_GET['firstname'];
+  $surname = $_GET['surname'];
+  $subject = $_GET['subject'];
+  $fromMail = $_GET['email'];
+  $message = $_GET['message'];
+  $from = new SendGrid\Email(null, $fromMail);
+  $to = new SendGrid\Email(null, "darran.blacky@gmail.com");
+  $content = new SendGrid\Content("text/plain", $message);
   $mail = new SendGrid\Mail($from, $subject, $to, $content);
   
-  $sg = new \SendGrid('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');
   
 
   $response = $sg->client->mail()->send()->post($mail);
@@ -50,21 +53,5 @@
   echo $response->headers();
   echo $response->body();
 
-
-  
-
-// if(!mail($mailTo, $subject, $txt, $header)){
-
-
-//   echo ' failed : ';
-//   echo ' mailTO : ' . $to;
-//   echo ' subject : ' . $subject;
-//   echo ' txt : ' . $content;
-//   echo ' header : ' . $header;
-
-//   mail('info@robbiemalone.com', 'test subject', '3 Hours', 'From : Chris Exton');
-//   mail('darran.blacky@gmail.com', 'test subject', '3 Hours', 'From : Chris Exton');
-
-// }
 
 ?>
