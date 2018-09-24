@@ -200,6 +200,21 @@ label {
 button {
   border-radius: 0; }
 
+  .form-control-placeholder {
+    position: absolute;
+    top: 0;
+    padding: 7px 0 0 13px;
+    transition: all 200ms;
+    opacity: 0.5;
+  }
+  
+  .form-control:focus + .form-control-placeholder,
+  .form-control:valid + .form-control-placeholder {
+    font-size: 75%;
+    transform: translate3d(0, -38%, 0);
+  }
+  
+
 button:focus {
   outline: 1px dotted;
   outline: 5px auto -webkit-focus-ring-color; }

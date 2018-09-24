@@ -92,9 +92,12 @@
 
   <div class="site-section">
       <div class="container">
+          <h2 class="heading">Contact Us</h2>
+
         <div class="row block-9">
-          <div class="col-md-6 pr-md-5">
-            <h2 class="heading">Contact Us 1</h2>
+            <div class="col-md-6 pr-md-5">
+
+          <!-- <div class="col-md-6 pr-md-5">
             <form action="mail/contact_me.php">
               <div class="form-group">
                 <input type="text" name='name' class="form-control px-3 py-3" placeholder="Your Name">
@@ -105,6 +108,26 @@
               <div class="form-group">
                 <input type="text" name='subject' class="form-control px-3 py-3" placeholder="Subject">
               </div>
+              <div class="btn-group">
+                <button class="btn btn-secondary btn-lg" type="button">
+                  Large split button
+                </button>
+                <button type="button" class="btn btn-lg btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <div class="dropdown-menu">
+                  ...
+                </div>
+              </div>
+
+              <div class="dropdown">
+                <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Dropdown trigger
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dLabel">
+                  ...
+                </div>
+              </div>
               <div class="form-group">
                 <textarea name="message" cols="30" rows="7" class="form-control px-3 py-3" placeholder="Message"></textarea>
               </div>
@@ -112,15 +135,77 @@
                 <input type="submit" name="submit" value="Send Message" class="btn btn-primary py-3 px-5">
               </div>
             </form>
+            </div> -->
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_name">Firstname </label>
+                    <input id="form_name" type="text" name="firstname" class="form-control" placeholder="Please enter your firstname " required="required" data-error="Firstname is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_lastname">Lastname </label>
+                    <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your lastname " required="required" data-error="Lastname is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_email">Email </label>
+                    <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email " required="required" data-error="Valid email is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
             </div>
 
-            <div class="col-md-6" id="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2035.2760109007897!2d-7.244652810662031!3d52.653389698968056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x485d3a0a76c6bb9b%3A0x2c2342306a6b71a2!2sCarraig+Rua!5e0!3m2!1sen!2sie!4v1535501703511" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_need">Select Room</label>
+                      <select id="form_need" name="subject" class="form-control" required="required" data-error="Please specify your need.">
+                          <option value="any">Any room available</option>
+                          <option value="single">Single Room</option>
+                          <option value="double">Double Room</option>
+                          <option value="triple">Triple Room</option>
+                          <option value="family">Family Room</option>
+                      </select>
+                    <div class="help-block with-errors"></div>
+                </div>
             </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="form_message">Message </label>
+                    <textarea id="form_message" name="message" class="form-control" placeholder="Enter your message here" rows="4" required="required" data-error="Please, leave us a message."></textarea>
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+              <input type="submit" style="width:100%" name="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+            </div>
+        </div>
+       
+
+            <div class="col-md-6" id="map">
+                <div class="col-md-6 pr-md-5">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2035.2760109007897!2d-7.244652810662031!3d52.653389698968056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x485d3a0a76c6bb9b%3A0x2c2342306a6b71a2!2sCarraig+Rua!5e0!3m2!1sen!2sie!4v1535501703511" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+           </div>
+              </div>
 
         </div>
   </div>
 </div>
+
+
+
+
+
   <!-- <div class="site-section">
     <div class="container">
       <div class="row block-9">
