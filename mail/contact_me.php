@@ -17,7 +17,7 @@
   $fromMail = $_GET['email'];
   $message = $_GET['message'];
   $from = new SendGrid\Email(null, $fromMail);
-  $to = new SendGrid\Email(null, "darran.blacky@gmail.com");
+  $to = new SendGrid\Email(null, "carraigrua@eircom.net");
   $content = new SendGrid\Content("text/plain", $message);
   $mail = new SendGrid\Mail($from, $subject, $to, $content);
   
