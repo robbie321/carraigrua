@@ -21,7 +21,7 @@
   $content = new SendGrid\Content("text/plain", $message);
   $mail = new SendGrid\Mail($from, $subject, $to, $content);
   
-  $sg = new \SendGrid('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');
+
 
   $response = $sg->client->mail()->send()->post($mail);
   echo $response->statusCode();
