@@ -1,15 +1,18 @@
 <?php
  require '../vendor/autoload.php';
+ if ( function_exists( 'mail' ) )
+ {
+     echo 'mail() is available <br> ';
+  // mail('13155105@studentmail.ul.ie', 'test subject', '3 Hours', 'From : Chris Exton');
 
-    echo 'submit clicked';
-    echo '<br>';
-
-
-
+ }
+ else
+ {
+     echo 'mail() has been disabled';
+ } 
   
   
-  $firstName = $_GET['firstname'];
-  $surname = $_GET['surname'];
+  $name = $_GET['name'];
   $subject = $_GET['subject'];
   $fromMail = $_GET['email'];
   $message = $_GET['message'];
