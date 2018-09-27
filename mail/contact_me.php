@@ -1,37 +1,9 @@
 <?php
  require '../vendor/autoload.php';
-//  if ( function_exists( 'mail' ) )
-//  {
-//      echo 'mail() is available <br> ';
-//   mail('13155105@studentmail.ul.ie', 'test subject', '3 Hours', 'From : Chris Exton');
 
-//  }
-//  else
-//  {
-//      echo 'mail() has been disabled';
-//  } 
- 
- 
-  // $name = $_POST['name'];
-  // $subject = $_POST['subject'];
-  // $from = $_POST['email'];
-  // $message = $_POST['message'];
-  // $to = "darran.blacky@gmail.com";
-
-  // $header = "From: ".$emailFrom;
-  // $content="You have recieved and email from ".$name.".\n\n".$message;
-
-
-
-  // if(isset($_POST['submit'])){
     echo 'submit clicked';
     echo '<br>';
 
-
-
-  //   echo 'clicked : ';
-  // mail($to, $subject, $content, $header);
-  // header("Location: index.php?mailsend");
 
 
   
@@ -46,7 +18,7 @@
   $content = new SendGrid\Content("text/plain", $message);
   $mail = new SendGrid\Mail($from, $subject, $to, $content);
   
-  
+  $sg = new \SendGrid('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');
 
   $response = $sg->client->mail()->send()->post($mail);
   echo $response->statusCode();
