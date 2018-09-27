@@ -24,7 +24,7 @@
   </head>
   <body>
     
-  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-dark" id="ftco-navbar">
     <div class="container">
       <a class="navbar-brand" href="index.html">Carraig Rua B&B</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,12 +33,19 @@
 
       <div class="collapse navbar-collapse" id="ftco-nav">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="rooms.html" class="nav-link">Rooms</a></li>
-          <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-          <li class="nav-item "><a href="about.html" class="nav-link">About Us</a></li>
-          <li class="nav-item"><a href="blog.html" class="nav-link">Things To Do</a></li>
-          <li class="nav-item active"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item "><a href="index.html" class="nav-link ">Home</a></li>
+          <li class="nav-item"><a href="rooms.html" class="nav-link ">Rooms</a></li>
+          <li class="nav-item dropdown">
+              <a href="javascript:return false" class="dropdown-toggle nav-link" data-toggle="dropdown">Location/Services<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="kilkenny-location-bandb.html">Location</a></li>
+                <li><a href="services.html" >Services</a></li>
+              </ul>
+            </li>
+          <!-- <li class="nav-item"><a href="services.html" class="nav-link ">Services</a></li> -->
+          <li class="nav-item "><a href="about.html" class="nav-link ">About Us</a></li>
+          <li class="nav-item"><a href="blog.html" class="nav-link ">Things To Do</a></li>
+          <li class="nav-item active"><a href="contact.html" class="nav-link ">Contact</a></li>
         </ul>
       </div>
     </div>
@@ -46,97 +53,23 @@
   <!-- END nav -->
 
 
-  
-  <div class="block-30 block-30-sm item" style="background-image: url('images/banner.jpg');" data-stellar-background-ratio="0.5">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-10">
-          <span class="subheading-sm">Contact</span>
-          <h2 class="heading">Let us know your queries below</h2>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <!-- <form method="POST" >
-    <input type="email" name="email" placeholder="Your email">
-    <textarea name="message" placeholder="Your message"></textarea>
-    <button type="submit">Send</button>
-  </form> -->
-
-  <!-- <script>
-  function _(id){ return document.getElementById(id);}
-  function submitForm() {
-    _("mybtn").disabled = true;
-    _("status").innerHTML = 'please wait ...';
-    var formdata = new FormData();
-    formdata.append( "n", _("n").value );
-    formdata.append( "e", _("e").value );
-    formdata.append( "m", _("m").value );
-    var ajax = new XMLHttoRequest();
-    ajax.open( "POST", "mail/contact_me.php");
-    ajax.onreadystatechange = function() {
-      if(ajax.readyState == 4 && ajax.status == 200){
-        if(ajax.responseText == "success"){
-           _("my_form").innerHTML = '<h2>Thanks '+_("n").value+', your message has been sent.</h2>';
-        }else {
-           _("status").innerHTML = ajax.responseText;
-          _("mybtn").disabled = false;
-        }
-      }
-    }
-   ajax.send( formdata );
-  }
-  </script> -->
 
   <div class="site-section">
       <div class="container">
-          <h2 class="heading">Contact Us</h2>
-
         <div class="row block-9">
+            <div class="col-6 col-md-3">
+              </div>
+              <div class="col-md-6">
+                  <h2 class="heading">Contact Us</h2>
+                  <p class="heading">Reservation / Information Request. If you would like to make a reservation request or need additional information please complete
+                      the form below and we will get back to you as soon as possible.</p>
+              </div>
+            
+        </div>
+        <div class="row block-9">
+          <div class="col-6 col-md-3">
+          </div>
             <div class="col-md-6 pr-md-5">
-
-          <!-- <div class="col-md-6 pr-md-5">
-            <form action="mail/contact_me.php">
-              <div class="form-group">
-                <input type="text" name='name' class="form-control px-3 py-3" placeholder="Your Name">
-              </div>
-              <div class="form-group">
-                <input type="text" name='email' class="form-control px-3 py-3" placeholder="Your Email">
-              </div>
-              <div class="form-group">
-                <input type="text" name='subject' class="form-control px-3 py-3" placeholder="Subject">
-              </div>
-              <div class="btn-group">
-                <button class="btn btn-secondary btn-lg" type="button">
-                  Large split button
-                </button>
-                <button type="button" class="btn btn-lg btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <span class="sr-only">Toggle Dropdown</span>
-                </button>
-                <div class="dropdown-menu">
-                  ...
-                </div>
-              </div>
-
-              <div class="dropdown">
-                <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Dropdown trigger
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dLabel">
-                  ...
-                </div>
-              </div>
-              <div class="form-group">
-                <textarea name="message" cols="30" rows="7" class="form-control px-3 py-3" placeholder="Message"></textarea>
-              </div>
-              <div class="form-group">
-                <input type="submit" name="submit" value="Send Message" class="btn btn-primary py-3 px-5">
-              </div>
-            </form>
-            </div> -->
-
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
@@ -166,7 +99,7 @@
                 <div class="form-group">
                     <label for="form_need">Select Room</label>
                       <select id="form_need" name="subject" class="form-control" required="required" data-error="Please specify your need.">
-                          <option value="any">Any room available</option>
+                          <option value="any" disabled selected>Choose a room</option>
                           <option value="single">Single Room</option>
                           <option value="double">Double Room</option>
                           <option value="triple">Triple Room</option>
@@ -192,11 +125,11 @@
         </div>
        
 
-            <div class="col-md-6" id="map">
+            <!-- <div class="col-md-6" id="map">
                 <div class="col-md-6 pr-md-5">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2035.2760109007897!2d-7.244652810662031!3d52.653389698968056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x485d3a0a76c6bb9b%3A0x2c2342306a6b71a2!2sCarraig+Rua!5e0!3m2!1sen!2sie!4v1535501703511" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
            </div>
-              </div>
+              </div> -->
 
         </div>
   </div>
@@ -205,35 +138,6 @@
 
 
 
-
-  <!-- <div class="site-section">
-    <div class="container">
-      <div class="row block-9">
-        <div class="col-md-6 pr-md-5">
-          <form action="mail/contact_me.php">
-            <div class="form-group">
-              <input type="text" name='name' class="form-control px-3 py-3" placeholder="Your Name">
-            </div>
-            <div class="form-group">
-              <input type="text" name='email' class="form-control px-3 py-3" placeholder="Your Email">
-            </div>
-            <div class="form-group">
-              <input type="text" name='phone' class="form-control px-3 py-3" placeholder="Subject">
-            </div>
-            <div class="form-group">
-              <textarea name="message" id="" cols="30" rows="7" class="form-control px-3 py-3" placeholder="Message"></textarea>
-            </div>
-            <div class="form-group">
-              <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
-            </div>
-          </form>
-        
-        </div>
-
-        <div class="col-md-6" id="map"></div>
-      </div>
-    </div>
-</div> -->
   
 
   
@@ -256,22 +160,14 @@
             <div class="block-23">
               <h3 class="heading-section">Contact Info</h3>
                 <ul>
-                  <li><span class="icon icon-map-marker"></span><span class="text">Carraig Rua, Dublin Road, Kilkenny, Ireland.</span></li>
-                  <li><a href="#"><span class="icon icon-phone"></span><span class="text">+ 353 (0) 56 - 7722929</span></a></li>
+                  <li><span class="icon icon-map-marker"></span><span class="text">Carraig Rua, Dublin Road, Kilkenny, R95 EPD1, Ireland.</span></li>
+                  <li><a href="#"><span class="icon icon-phone"></span><span class="text">Phone: + 353 (0) 56 - 7722929<br>Mobile: </span></a></li>
                   <li><a href="#"><span class="icon icon-envelope"></span><span class="text">carraigruabandb@eircom.net</span></a></li>
-                  <li><span class="icon icon-clock-o"></span><span class="text">Monday &mdash; Friday 8:00am - 5:00pm</span></li>
                 </ul>
               </div>
           </div>
         
         
-      </div>
-      <div class="row pt-5">
-        <div class="col-md-12 text-left">
-          <p>
-            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This website was made by Robert Malone <i class="icon-heart" aria-hidden="true"></i><a href="https://colorlib.com" target="_blank" class="text-primary">robbiemalone.com</a>   
-          </p>
-        </div>
       </div>
     </div>
   </footer>

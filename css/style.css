@@ -1611,7 +1611,7 @@ pre {
     color: #6c757d;
     opacity: 1; }
   .form-control::placeholder {
-    color: #6c757d;
+    color: #9da0a3;
     opacity: 1; }
   .form-control:disabled, .form-control[readonly] {
     background-color: #e9ecef;
@@ -7572,12 +7572,19 @@ h1, h2, h3, h4, h5,
 
 .form-control {
   background: #fff !important;
-  color: #000 !important;
+  color: #000000 !important;
   border-radius: 0px;
   -webkit-box-shadow: none !important;
   box-shadow: none !important; }
   .form-control:focus, .form-control:active {
     border-color: #000; }
+
+.form-controls {
+  background: #fff !important;
+  color: #000000 !important;
+  border-radius: 0px;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important; }
 
 textarea.form-control {
   height: inherit !important; }
@@ -8462,8 +8469,8 @@ textarea.form-control {
   display: inline-block;
   font-weight: 300; }
   .section-heading .subheading-sm:after {
-    width: 80px;
-    height: 2px;
+    /* width: 80px; */
+    /* height: 2px; */
     background: #999999;
     position: absolute;
     left: 120%;
@@ -8884,3 +8891,22 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+
+
+    select:required:invalid {
+      color: gray;
+    }
+    option[value=""][disabled] {
+      display: none;
+    }
+    option {
+      color: black;
+    }
+
+  .color-me{
+    color: black;
+  }
+
+ tab{
+    padding: 0 80px;
+  }
