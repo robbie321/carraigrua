@@ -20,8 +20,7 @@
   $to = new SendGrid\Email(null, "carraigruabandb@eircom.net");
   $content = new SendGrid\Content("text/plain", $message);
   $mail = new SendGrid\Mail($from, $subject, $to, $content);
-  
-  $sg = new \SendGrid("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");
+
 
 
   $response = $sg->client->mail()->send()->post($mail);
