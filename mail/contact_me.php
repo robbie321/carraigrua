@@ -30,6 +30,6 @@
   echo $response->headers();
   echo $response->body();
 
-//   header('Location:http://carraigruabandb.com/contact.html');
+  header('Location:http://carraigruabandb.com/contact.html');
 
 ?>
