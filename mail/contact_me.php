@@ -22,7 +22,9 @@
   $content = new SendGrid\Content("text/plain", $message);
   $mail = new SendGrid\Mail($from, $subject, $to, $content);
 
- 
+  $sg = new \SendGrid('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');
+//   $sg = new \SendGrid("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");
+
   $response = $sg->client->mail()->send()->post($mail);
   echo $response->statusCode();
   echo $response->headers();
