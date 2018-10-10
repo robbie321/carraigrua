@@ -8891,7 +8891,29 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+.resize{
+  font-size: 16px;
+}
+    @media only screen and (max-width: 992px) {
 
+      .resize { 
+         font-size: 13px; 
+      }
+   
+   }
+
+   /* @media only screen and (max-width: 388px) {
+
+    .resize { 
+       font-size: 8px; 
+    }
+    @media only screen and (max-width: 388px) {
+
+      .resize { 
+         font-size: 7px; 
+      }
+ 
+ } */
 
     select:required:invalid {
       color: gray;
