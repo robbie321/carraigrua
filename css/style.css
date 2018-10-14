@@ -2540,7 +2540,8 @@ input[type="button"].btn-block {
   color: #212529;
   text-align: left;
   list-style: none;
-  background-color: #fff;
+  
+  background-color: #52525242 ;
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 0.25rem; }
@@ -7284,7 +7285,8 @@ a {
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
   transition: .3s all ease;
-  color: #e1af22; }
+  color: white;  
+}
   a:hover {
     text-decoration: none;
     color: #000000; }
@@ -7377,6 +7379,17 @@ h1, h2, h3, h4, h5,
     text-transform: uppercase;
     font-size: 16px;
     letter-spacing: .1em; }
+
+    .ftco-navbar-light.scrolled.dropdown-menu{
+      background: white;
+      color: black; 
+      text-align: right;
+
+    }
+    
+    .ftco-navbar-light.scrolled.dropdown-menu.line-item{
+      color: #000;
+    }
   .ftco-navbar-light.scrolled {
     position: fixed;
     right: 0;
@@ -7401,6 +7414,13 @@ h1, h2, h3, h4, h5,
         background: none;
         padding-left: 0 !important;
         padding-right: 0 !important; } }
+        
+        .ftco-navbar-light .dropdown-menu{
+         
+          text-align: right;
+    
+        }
+
     .ftco-navbar-light.scrolled .navbar-toggler {
       border: none;
       color: rgba(0, 0, 0, 0.5) !important;
