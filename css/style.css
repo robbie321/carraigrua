@@ -8720,6 +8720,7 @@ textarea.form-control {
   -webkit-box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.2);
   box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.2); }
   .block-34 .image img, .block-3 .image img {
+    height: 245px;
     max-width: 100%; }
   .block-34 .text, .block-3 .text {
     padding: 30px; }
